@@ -1,6 +1,6 @@
 module Api::V1
-    class Application < ActionController::API
-        acts_as_token_authentication_handle_for User
+    class ApiController < ActionController::API
+        acts_as_token_authentication_handler_for User
         before_action :require_authentication!
 
         private
